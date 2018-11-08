@@ -1,0 +1,2 @@
+i="nike"
+print(i)
