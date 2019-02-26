@@ -1,3 +1,4 @@
-a="abf"
-b="abd"
-print (a<b)
+w=['s','m','s','k']
+print(w)
+n=set(w)
+print(n)

@@ -18,3 +18,10 @@ st=[d.get(i) for i in shifr]
 
 #print (a,b)
 print (''.join(st))
+
+'''
+#good from stepik
+a,b,c,d=input(),input(),input(),input()
+print(''.join(b[a.index(i)] for i in c))
+print(''.join(a[b.index(i)] for i in d))
+'''
