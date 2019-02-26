@@ -67,5 +67,4 @@ for i in range(c):
 
 for key in d:
 	print (key,end=':')
-	for c in d[key]:
-		print (c,'',end='')
+	print (d[key][0],d[key][1],d[key][2],d[key][3],d[key][4])
