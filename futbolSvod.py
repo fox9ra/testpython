@@ -1,3 +1,4 @@
+#ex 3.7.1
 #c=int(input("Кол игр:"))
 c=int(input())
 #c=int(input())
