@@ -22,7 +22,7 @@ for i in range(c):
 	if k1 in d:
 		print ('ключ1 есть')
 		d[k1][0]+=1
-		d[k1][1]+=
+		d[k1][1]+=1
 	else:
 		#print ('ключа нет')
 		d[k1]=[0]*4
