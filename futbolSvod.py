@@ -1,41 +1,71 @@
-def f(x):
-	
-	return x
-
-c=int(input("Кол игр:"))
+#c=int(input("Кол игр:"))
+c=int(input())
 #c=int(input())
+#создание пустого словаря игр
 d={}
 
-for i in range(c):
-	k1, s1, k2, s2=input("Игра:").split(';')
-	print(k1, s1, k2, s2)
-	if s1 > s2:
-		ks1=3
-		ks2=0
-	elif s1==s2:
-		ks1=1
-		ks2=1
-	else:
-		ks1=0
-		ks2=3
-	print(ks1, ks2)
-	if k1 in d:
-		print ('ключ1 есть')
-		d[k1][0]+=1
-		d[k1][1]+=1
+#функция поиска по ключу и прибавления очков
+def keyfind(key,kv,kn,kp,ks):
+	if key in d:
+		#print ('ключ1 есть')
+		d[key][0]+=1
+		d[key][1]+=kv
+		d[key][2]+=kn
+		d[key][3]+=kp
+		d[key][4]+=ks
 	else:
 		#print ('ключа нет')
-		d[k1]=[0]*4
-		print(d[k1])
-print (d)
+		d[key]=[0]*5
+		d[key][0]+=1
+		d[key][1]+=kv
+		d[key][2]+=kn
+		d[key][3]+=kp
+		d[key][4]+=ks
 
 
-'''
-a=[0]*5
-b=[1]*5
-d={'a':a, 'b':b}
-print(d)
-d['a'][0]=1
-d['b'][1]=5
-print(d)
-'''
+for i in range(c):
+#ввод игр
+	#k1, s1, k2, s2=input("Игра:").split(';')
+	k1, s1, k2, s2=input().split(';')
+	#print(k1, s1, k2, s2)
+#присвоение очков
+	if s1 > s2:
+		ks1=3
+		kv1=1
+		kp1=0
+		kn1=0
+		ks2=0
+		kv2=0
+		kp2=1
+		kn2=0
+		keyfind(k1,kv1,kn1,kp1,ks1)
+		keyfind(k2,kv2,kn2,kp2,ks2)
+	elif s1==s2:
+		ks1=1
+		kv1=0
+		kp1=0
+		kn1=1
+		ks2=1
+		kv2=0
+		kp2=0
+		kn2=1
+		keyfind(k1,kv1,kn1,kp1,ks1)
+		keyfind(k2,kv2,kn2,kp2,ks2)
+	else:
+		ks1=0
+		kv1=0
+		kp1=1
+		kn1=0
+		ks2=3
+		kv2=1
+		kp2=0
+		kn2=0
+		keyfind(k1,kv1,kn1,kp1,ks1)
+		keyfind(k2,kv2,kn2,kp2,ks2)
+
+#print (d)
+
+for key in d:
+	print (key,end=':')
+	for c in d[key]:
+		print (c,'',end='')
