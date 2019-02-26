@@ -58,42 +58,13 @@ for i in range(c):
 		kp1=1
 		kn1=0
 		ks2=3
-<<<<<<< HEAD
-	print(ks1, ks2)
-	if k1 in d:
-		print ('ключ1 есть')
-		d[k1][0]+=1
-		d[k1][1]+=1
-	else:
-		#print ('ключа нет')
-		d[k1]=[0]*4
-		print(d[k1])
-print (d)
-=======
-		kv2=1
-		kp2=0
-		kn2=0
-		keyfind(k1,kv1,kn1,kp1,ks1)
-		keyfind(k2,kv2,kn2,kp2,ks2)
-
-#print (d)
->>>>>>> 4ac2498a67c4b6c9d6aed129e14a06a59aea8de1
 
 for key in d:
 	print (key,end=':')
 	print (d[key][0],d[key][1],d[key][2],d[key][3],d[key][4])
 
+
 '''
-<<<<<<< HEAD
-a=[0]*5
-b=[1]*5
-d={'a':a, 'b':b}
-print(d)
-d['a'][0]=1
-d['b'][1]=5
-print(d)
-'''
-=======
 #Good from stepik
 def command(c, res):
     if not c in dct: dct[c] = [0, 0, 0, 0, 0]
@@ -110,4 +81,3 @@ for i in range(int(input())):
 for c in dct:
     print('{}:{} {} {} {} {}'.format(c, *dct[c]))
 '''
->>>>>>> 4ac2498a67c4b6c9d6aed129e14a06a59aea8de1
