@@ -8,11 +8,13 @@ shifr=input()
 #заполнение словаря функция zip
 d=dict(zip(a,b))
 
-print(*((d.get(i)) for i in slovo))
-print (d)
+#перебор элментов из slovo, поиск в d и сохранение в список 
+st=[d.get(i) for i in slovo]
+#вывод списка
+print (''.join(st))
 #инверсия словаря
 d = {v:k for k, v in d.items()}
-print(*((d.get(i)) for i in shifr))
+st=[d.get(i) for i in shifr]
 
 #print (a,b)
-print (d)
+print (''.join(st))
