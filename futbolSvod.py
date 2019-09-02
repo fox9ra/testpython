@@ -8,14 +8,14 @@ d={}
 #функция поиска по ключу и прибавления очков
 def keyfind(key,kv,kn,kp,ks):
 	if key in d:
-		#print ('ключ1 есть')
+		print ('ключ1 есть')
 		d[key][0]+=1
 		d[key][1]+=kv
 		d[key][2]+=kn
 		d[key][3]+=kp
 		d[key][4]+=ks
 	else:
-		#print ('ключа нет')
+		print ('ключа нет')
 		d[key]=[0]*5
 		d[key][0]+=1
 		d[key][1]+=kv
